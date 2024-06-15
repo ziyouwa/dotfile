@@ -1,0 +1,37 @@
+#font=DejaVu Sans Mono 11
+sort=-time
+layer=overlay
+background-color=#2e34407f
+text-color=#ffffff
+border-color=#99c0d0
+border-radius=10
+border-size=1
+#default-timeout=5
+#border-size=10
+#border-color=#00000055
+#margin=25
+
+[hidden]
+format=(and %h more)
+text-color=#777777
+
+[urgency=high]
+background-color=#c00000
+border-color=#ff0000
+ignore-timeout=1
+
+[urgency=low]
+border-color=#cccccc
+
+[urgency=normal]
+border-color=#99c0d0
+
+[urgency=critical]
+border-color=#bf616a
+#ignore-timeout=1
+
+[mode=dnd]
+invisible=1
+
+[urgency=normal app-name=poweralertd]
+invisible=1

@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+#alias ls="ls --color=auto"
+alias ls="lsd"
+alias ll="ls -l"
+alias la="ls -a"
+alias lh="ls -lh"
+alias lt="ls --tree"
+
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+
+alias less="less -R"
+
+alias ff='fd --type f --hidden --exclude .git | fzf --preview "bat --color=always --theme=OneHalfDark -p --line-range=:500 {}" | xargs -r "$EDITOR"'
+alias bf="du -hxs * | sort -rh | head"
+alias psmem="ps axch -o cmd,%mem --sort=-%mem | less"
+alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | less"
+alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
+alias userlist="cut -d: -f1 /etc/passwd | sort"
+
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+
+alias config='/usr/bin/git --git-dir=/work/dotfile --work-tree=$HOME'

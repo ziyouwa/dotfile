@@ -1,0 +1,14 @@
+profile dual {
+	output DP-1 enable scale 1.4 position 0 0 primary
+	output HDMI-A-1 enable scale 1.4 position 2560 0
+	#output "Unknown General CRUF926190015" mode 2560x1440 position 0,0
+	#output "Philips Consumer Electronics Company 237EQPH UHB1146036637" mode 1920x1080 position 2560,0
+}
+profile hkc {
+	output HDMI-A-1 enable scale 1.4
+	#output "Unknown General CRUF926190015" mode 2560x1440 position 2560,0
+}
+profile aoc {
+	output DP-1 enable scale 1.4
+	#output "Philips Consumer Electronics Company 237EQPH UHB1146036637" mode 1920x1080 position 0,0
+}
