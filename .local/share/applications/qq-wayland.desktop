@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=QQ-Wayland
+Exec=/opt/QQ/start.sh -ozone-platform-hint=auto  --enable-features=WebRTCPipeWire,WaylandWindowDecorations --inprivate --enable-wayland-ime %U
+Terminal=false
+Type=Application
+Icon=qq
+StartupWMClass=QQ
+Categories=Network;
+Comment=QQ

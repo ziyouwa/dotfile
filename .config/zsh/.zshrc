@@ -129,8 +129,29 @@ gitPrompt() {
     fi
 }
 setopt PROMPT_SUBST
+# Prompt
+function collapsed_curdir() {
+  local i pwd
+  pwd=("${(s:/:)PWD/#$HOME/~}")
+  if (( $#pwd >1 )); then
+    for i in {1..$(($#pwd-1))}; do
+      if [[ "$pwd[$i]" = .* ]]; then
+        pwd[$i]="${${pwd[$i]}[1,2]}"
+      else
+        pwd[$i]="${${pwd[$i]}[1]}"
+      fi
+    done
+  fi
+  echo "${(j:/:)pwd}"
+}
+
+function custom_color() {
+  # 输出50~200
+  echo $(( $(($(date +%s%N) % 60)) + 50 ))
+}
 #PROMPT='%B%F{magenta}%n%B%F{cyan}%n%m%k %B%F{yellow}%1~%# %b%f%k'
-PROMPT="%B%F{magenta}%n%b%f%B%F{green}@%B%F{cyan}%m%f%k:%B%F{yellow}%1~ %b%f%k
-🦊 "   #😏🐼
+my_prompt="%B%F{$(custom_color)}%n%b%f%B%F{$(custom_color)}@%B%F{$(custom_color)}%m%f%k:%B%F{$(custom_color)}"
+PROMPT='${my_prompt}$(collapsed_curdir) %b%f%k 
+🦊 '   #😏🐼
 RPROMPT='$(gitPrompt)'
 #PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% "
