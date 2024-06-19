@@ -1,5 +1,11 @@
 #font=DejaVu Sans Mono 11
 sort=-time
+
+
+on-button-left=invoke-default-action
+on-button-right=dismiss-all
+on-button-middle=dismiss
+
 layer=overlay
 background-color=#2e34407f
 text-color=#ffffff
