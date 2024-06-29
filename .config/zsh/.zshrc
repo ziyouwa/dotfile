@@ -30,7 +30,8 @@ autoload -Uz compinit && compinit -d $HOME/.cache/zcompdump
 
 source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
 
-[ -f "$XDG_CONFIG_HOME/shell/aliasrc" ] && source "$XDG_CONFIG_HOME/shell/aliasrc"
+[ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
+[ -f "$HOME/.config/shell/profile" ] && source "$HOME/.config/shell/profile"
 
 [ -f "$ZDOTDIR/.zshenv" ] && source "$ZDOTDIR/.zshenv"
 [ -f "$ZDOTDIR/.zshrc_prompt" ] && source "$ZDOTDIR/.zshrc_prompt"

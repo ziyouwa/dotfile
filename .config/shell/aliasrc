@@ -8,10 +8,21 @@ alias ls="lsd"
 alias ll="ls -l"
 alias la="ls -a"
 alias lh="ls -lh"
+alias lah="ls -lah"
 alias lt="ls --tree"
 
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
+
+alias tns='tmux new -s'
+alias tmls='tmux list-session'
+alias tat='tmux attach -t'
+alias tkt='tmux kill-session -t'
+alias tct='tmux switch -t'
+alias trt='tmux rename-session -t'
+alias tnw='tmux new-window -n'
+alias tcw='tmux select-window -t'
+alias trw='tmux rename-window'
 
 alias less="less -R"
 
